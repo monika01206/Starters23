@@ -1,0 +1,46 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- !=0)
+		{
+		    int n = sc.nextInt();
+		    int k = sc.nextInt();
+		    int x = sc.nextInt();
+		    if(k<x)
+		        System.out.println(-1);
+		    else
+		    {
+		        int count=0;
+		        for(int i=0;i<n;i++)
+		        {
+		            if(count==x)
+		                count=0;
+		            System.out.print(count+" ");
+		            count++;
+		        }
+		    }
+		    System.out.println();
+		}
+	}
+}
+.
+.
+.
+SAMPLE INPUT
+3
+3 3 3
+4 3 2
+5 4 5
+SAMPLE OUTPUT
+0 1 2
+1 0 1 1
+-1
